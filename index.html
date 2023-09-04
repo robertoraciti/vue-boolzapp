@@ -69,6 +69,7 @@
                   id="Search"
                   class="bar"
                   placeholder="Cerca o inizia una nuova chat"
+                  v-model.trim="newSearch"
                 />
               </div>
             </div>
@@ -76,8 +77,9 @@
           <div class="contacts-container">
             <div
               v-for="(contact, index) in contacts"
-              class="contact d-flex"
+              class="contact"
               :class="(index == activeChat) ? 'active' : ''"
+              v-show="(contact.name.toLowerCase()).includes(newSearch.toLowerCase())"
               @click="chatClick(index)"
             >
               <div class="contact-avatar">

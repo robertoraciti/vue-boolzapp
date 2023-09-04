@@ -1,7 +1,3 @@
-.bordered {
-  border: 1px solid black;
-}
-
 .wrapper {
   height: 100vh;
   background: linear-gradient(#009688 0% 15%, #d5dbd8 15% 100%);
@@ -13,7 +9,6 @@
   height: 100%;
   width: 75%;
   margin: auto;
-  border: 1px solid black;
 }
 
 .contacts-section {
@@ -21,7 +16,6 @@
   flex-direction: column;
   height: 100%;
   width: 30%;
-  border: 1px solid green;
   background-color: white;
 }
 
@@ -30,7 +24,6 @@
   flex-direction: column;
   height: 100%;
   width: 70%;
-  border: 1px solid green;
 }
 
 .user-info {
@@ -117,6 +110,7 @@
 }
 
 .contact {
+  display: flex;
   background-color: white;
   height: 70px;
   padding-top: 8px;
