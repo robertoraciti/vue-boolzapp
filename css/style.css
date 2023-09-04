@@ -168,11 +168,21 @@
 }
 
 .msg {
-  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
   min-height: 50px;
   margin-bottom: 10px;
   border-radius: 10px;
   padding: 12px;
+}
+
+.msg i {
+  display: none;
+}
+
+.msg:hover .fa-angle-down {
+  display: block;
 }
 
 .msg-sent {

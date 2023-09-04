@@ -200,5 +200,9 @@ createApp({
         this.contacts[this.activeChat].messages.push(newObject);
       }, 1000);
     },
+
+    deleteMessage(index) {
+      this.contacts[this.activeChat].messages.splice(index, 1);
+    },
   },
 }).mount("#app");
