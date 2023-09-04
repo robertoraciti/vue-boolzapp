@@ -74,7 +74,12 @@
             </div>
           </div>
           <div class="contacts-container">
-            <div v-for="(contact, index) in contacts" class="contact d-flex">
+            <div
+              v-for="(contact, index) in contacts"
+              class="contact d-flex"
+              :class="(index == activeChat) ? 'active' : ''"
+              @click="chatClick(index)"
+            >
               <div class="contact-avatar">
                 <img
                   :src="contact.avatar"
@@ -92,7 +97,50 @@
             </div>
           </div>
         </div>
-        <div class="msg-section"></div>
+        <div class="msg-section">
+          <div class="user-info">
+            <div>
+              <img
+                :src="contacts[activeChat].avatar"
+                width="50"
+                alt=""
+                srcset=""
+                class="avatar"
+              />
+            </div>
+            <div class="contact-status">
+              <span>{{contacts[activeChat].name}}</span>
+              <p class="text-small">Ultimo accesso alle 12:00</p>
+            </div>
+            <div class="user-icons">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          <div class="msg-container clearfix p-5">
+            <div
+              class="msg"
+              :class="(messageEl.status == 'sent') ? 'msg-sent' : 'msg-received'"
+              v-for="(messageEl, index) in contacts[activeChat].messages"
+            >
+              {{ messageEl.message }}
+            </div>
+          </div>
+          <div class="text-section">
+            <i class="fa-regular fa-face-smile fa-lg"></i>
+            <div class="input-group mb-3 text-bar">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Scrivi un messaggio"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <i class="fa-solid fa-microphone fa-lg"></i>
+          </div>
+        </div>
       </div>
     </div>
   </body>

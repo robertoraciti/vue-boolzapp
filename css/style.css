@@ -26,6 +26,8 @@
 }
 
 .msg-section {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 70%;
   border: 1px solid green;
@@ -46,6 +48,7 @@
 .user-icons i {
   color: #b1b1b1;
   margin-right: 13px;
+  cursor: pointer;
 }
 
 .active-notify {
@@ -53,7 +56,7 @@
   align-items: center;
   background-color: #8edafc;
   padding-left: 10px;
-  height: 60px;
+  height: 75px;
 }
 
 .bell {
@@ -77,11 +80,14 @@
   font-size: 0.8rem;
 }
 
+.active-notify .text-small {
+  cursor: pointer;
+}
+
 .text-small {
   font-size: 0.7rem;
   margin: 0;
   color: gray;
-  cursor: pointer;
 }
 
 .search-container {
@@ -120,4 +126,69 @@
 .contact-avatar {
   width: 65px;
   margin-left: 15px;
+}
+
+.contact-status {
+  width: 88%;
+}
+
+.msg-section .user-info {
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  height: 52px;
+}
+
+.msg-section .user-icons {
+  width: 12%;
+  cursor: pointer;
+}
+
+.msg-container {
+  height: calc(100vh - 112px);
+  background-image: url("../img/mine.jpg");
+  display: flex;
+  flex-direction: column;
+}
+
+.text-section {
+  height: 60px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-section i {
+  width: 10%;
+  text-align: center;
+  cursor: pointer;
+  color: gray;
+}
+
+.text-bar {
+  width: 80%;
+  padding-top: 10px;
+  height: 45px;
+}
+
+.msg {
+  width: 250px;
+  min-height: 50px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.msg-sent {
+  background-color: #d5f9ba;
+  align-self: flex-end;
+}
+
+.msg-received {
+  background-color: #ffffff;
+}
+
+.active {
+  background-color: #e9ebeb;
 }

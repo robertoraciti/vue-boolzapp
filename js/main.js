@@ -168,6 +168,12 @@ createApp({
   data() {
     return {
       contacts,
+      activeChat: 0,
     };
+  },
+  methods: {
+    chatClick(index) {
+      this.activeChat = index;
+    },
   },
 }).mount("#app");
