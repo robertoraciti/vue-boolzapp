@@ -149,6 +149,7 @@
   background-image: url("../img/mine.jpg");
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .text-section {

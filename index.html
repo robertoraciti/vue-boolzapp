@@ -118,7 +118,7 @@
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
-          <div class="msg-container clearfix p-5">
+          <div class="msg-container p-5">
             <div
               class="msg"
               :class="(messageEl.status == 'sent') ? 'msg-sent' : 'msg-received'"
@@ -136,6 +136,8 @@
                 placeholder="Scrivi un messaggio"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
+                v-model.trim="newMessage"
+                @keyup.enter="addMessage()"
               />
             </div>
             <i class="fa-solid fa-microphone fa-lg"></i>
