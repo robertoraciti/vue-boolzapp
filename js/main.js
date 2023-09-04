@@ -188,5 +188,16 @@ createApp({
       console.log(newObject);
       this.newMessage = "";
     },
+
+    answer() {
+      const newObject = {
+        date: "10/01/2020 15:51:00",
+        message: "ok",
+        status: "received",
+      };
+      setTimeout(() => {
+        this.contacts[this.activeChat].messages.push(newObject);
+      }, 1000);
+    },
   },
 }).mount("#app");
